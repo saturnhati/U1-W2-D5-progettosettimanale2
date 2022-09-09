@@ -29,6 +29,7 @@ header {
     align-items: center;
     padding: 12px 20px;
     height: 6vh;
+    box-shadow: 0px 6px 12px #d3d3d3;
 }
 
 header a {
@@ -67,6 +68,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10vh;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
 }
 
 .hero p, .hero h1 {
@@ -140,7 +142,6 @@ section h2 {
 .main-content-motives p {
     text-align: left;
 }
-/* posso fare questa cosa sopra senza usare due selettori????? Devo centrare h3 e icone ma non p */
 
 .section-dark {
     margin-top: 8vh;
@@ -201,8 +202,6 @@ footer form {
     display: flex;
     flex-direction: column;
 }
-
-/* non mi è chiaro perché il bottone è a 100% mentre l'input per essere uguale è a 97% */
 
 address {
     display: inline-block;

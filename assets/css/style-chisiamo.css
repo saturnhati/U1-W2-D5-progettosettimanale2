@@ -1,11 +1,3 @@
-body {
-    font-size: 0.7rem;
-}
-
-section img {
-    max-width: 400px;
-}
-
 h1 {
     margin-bottom: 2vh;
 }
@@ -27,20 +19,24 @@ h1 {
     width: 100%;
 }
 
-table {
+.notebook-images div p {
+    width: 100%;
+}
+
+.table-desktop {
     max-width: 60%;
     margin: 3vh auto;
     border-collapse: collapse;
 }
 
-th {
+.table-desktop th {
     background-color:#5F82A3;
     color: white;
     padding: 1vh 0;
     border-right: 1px solid white;
 }
 
-td {
+.table-desktop td {
     padding: 2vh 1.5vh;
 }
 
@@ -48,9 +44,35 @@ td {
     background-color: #d2dce7;
 }
 
-table caption {
+.table-desktop caption {
     font-size: 1.2rem;
     margin-top: 4vh;
+}
+
+/* TABLE PER MOBILE */
+
+.tr-color-mobile {
+    background-color: #d2dce7;
+}
+
+.table-mobile {
+    max-width: 85%;
+    margin: 3vh auto 8vh auto;
+    border-collapse: collapse;
+}
+
+.table-mobile caption {
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.table-mobile td:first-child {
+    font-weight: 700;
+}
+
+
+.table-mobile td {
+    padding: 1vh 1.5vh;
 }
 
 /* RESPONSIVENESS */
@@ -60,8 +82,16 @@ table caption {
         flex-direction: column;
         justify-content: center;
     }
-    /* .notebook-images div p {
-        width: 60%;
-        margin: 0 auto;
-    } */
+}
+
+@media screen and (max-width:768px) {
+    .table-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .table-mobile {
+        display: none;
+    }
 }
