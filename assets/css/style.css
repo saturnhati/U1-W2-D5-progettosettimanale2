@@ -193,7 +193,7 @@ footer h3 {
 }
 
 footer input {
-    height: 3rem;
+    height: 2.5rem;
     border: 1px solid gray;
 }
 
@@ -325,3 +325,5 @@ address {
         padding-bottom: 3vh;
     }
 }
+
+/* ricordati l'ombra sotto all'header, la hero img più scura e di mettere l'alt a tutte le immagini */
