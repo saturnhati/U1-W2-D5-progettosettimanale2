@@ -44,7 +44,7 @@ nav {
 }
 
 nav a {
-    color: #000; 
+    color: rgba(0, 0, 0, .6); 
 }
 
 button {
@@ -226,6 +226,12 @@ address {
 /* RESPONSIVE */
 
 @media screen and (max-width:767px) {
+    header {
+        background-color: white;
+        position: sticky;
+        top:0;
+        z-index:0;
+    }
     .header-content {
         display: none;
     }
