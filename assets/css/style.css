@@ -1,9 +1,327 @@
 /* IMPOSTAZIONI GENERALI */
+body {
+    width: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #000; 
+    margin: 0;
+}
+
+h1 {
+    line-height: 1;
+    font-size: 3.5rem;
+}
+h2 {
+    line-height: 1.1;
+    font-size: 2.4rem;
+}
+h3{
+    line-height: 1.2;
+    font-size: 1.4rem;
+}
 
 /* HEADER */
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    height: 6vh;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0 10px;
+}
+
+nav {
+    display: inline-block;
+    margin: 0 1vh;
+}
+
+nav a {
+    color: #000; 
+}
+
+button {
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    background: rgb(108,193,226);
+    background: linear-gradient(90deg, rgba(108,193,226,1) 50%, rgba(57,47,122,1) 100%);
+}
+
+#logo {
+    height: 40px;
+}
+
 /* MAIN */
+
+.hero {
+    background-image: url(../images/banner.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10vh;
+}
+
+.hero p, .hero h1 {
+    color: white;
+    text-shadow: 1px 2px 4px black;
+    margin-bottom: 2vh;
+}
+
+#button-info {
+    transition: 1s;
+}
+
+#button-info:hover {
+    animation: button-shadow 1s linear;
+}
+
+@keyframes button-shadow {
+    0% {
+        box-shadow: none;
+    }
+    40%{
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 70%);
+    }
+    60%{
+        box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 50%);
+    }
+    80%{
+        box-shadow: 0px 0px 4px 7px rgba(0, 0, 0, 20%);
+    }
+   95%{
+        box-shadow: 0px 0px 4px 9px rgba(0, 0, 0, 10%);
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+i {
+    color: #e42424;
+    font-size: 2.5rem;
+}
+
+section h3 {
+    margin-bottom: 2vh;
+}
+
+.main-content {
+    width: 90%;
+    margin: 4vh auto;
+}
+
+.main-content-title {
+    text-align: center;
+}
+
+section h2 {
+    margin: 2.5vh 0;
+}
+
+.main-content-motives {
+    display: flex;
+    justify-content: space-around;
+    margin: 3vh 0;
+}
+
+.main-content-motives div {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.main-content-motives p {
+    text-align: left;
+}
+/* posso fare questa cosa sopra senza usare due selettori????? Devo centrare h3 e icone ma non p */
+
+.section-dark {
+    margin-top: 8vh;
+    padding: 8vh 0 8vh 0;
+    text-align: center;
+    color: white;
+    background-color: #0C0633;
+}
+
+.section-dark p {
+    margin-bottom: 2vh;
+}
+
+.section-objectives {
+    margin: 2vh 0;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-objectives h2 {
+    font-size: 1.5rem;
+    margin: 1vh 0;
+}
+
+#objectives {
+    padding: 0 2vh;
+    width: 40%;
+}
+
+#notebook {
+    width: 50%;
+    height: 50%;
+}
+
+h2 i {
+    font-size: 2rem;
+}
 
 /* FOOTER */
 
+footer {
+    background-color: rgb(238, 238, 238);
+    padding: 3vh;
+}
+
+footer h3 {
+    margin-bottom: 1.5vh;
+}
+
+footer input {
+    height: 3rem;
+    border: 1px solid gray;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* non mi è chiaro perché il bottone è a 100% mentre l'input per essere uguale è a 97% */
+
+address {
+    display: inline-block;
+}
+
+#footer-content {
+    display: flex;
+    padding: 2vh;
+    justify-content: space-around;
+}
+
+#footer-content div {
+    flex-basis: 28%;
+}
+
+#footer-infos {
+    text-align:center;
+    font-size: 1rem;
+    margin-top: 3vh;
+}
+
 /* RESPONSIVE */
+
+@media screen and (max-width:767px) {
+    .header-content {
+        display: none;
+    }
+    .hero {
+        padding: 3vh;
+    }
+    .main-content-motives {
+        flex-direction: column;
+    }
+    .main-content-motives p {
+        text-align: center;
+    }
+    .main-content-motives div {
+        margin: 3vh 0;
+    }
+    .section-dark h2 {
+        font-size: 2.8rem;
+    }
+    .section-objectives {
+        flex-direction: column;
+    }
+    #notebook {
+        width: 90%;
+        height: 90%;
+    }
+    #objectives {
+        width: 90%;
+        margin: 2vh 0;
+        text-align: center;
+    }
+    #footer-content {
+        flex-direction: column;
+        padding: 0 6vh;
+    }
+    #footer-content div {
+        margin: 2vh 0;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    #menu-dots {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    header {
+        justify-content: space-around;
+    }
+    #logo {
+        height: 30px;
+    }
+    body {
+        font-size: 0.8rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .main-content-motives {
+        margin: 8vh auto 0 auto;
+        width: 80%;
+
+        justify-content: space-around;
+    }
+    .main-content-motives div {
+        flex-basis: 25%;
+    }
+    .section-objectives {
+        justify-content: center;
+    }
+    #notebook {
+        width: 30%;
+        height: 30%;
+    }
+    #objectives {
+        flex-basis: 30%;
+    }
+    footer h3 {
+        font-size: 0.9rem;
+    }
+    #footer-content {
+        justify-content: space-around;
+    }
+    #footer-content div {
+        flex-basis: 22%;
+    }
+    #footer-infos {
+        font-size: 0.7rem;
+        padding-bottom: 3vh;
+    }
+}
